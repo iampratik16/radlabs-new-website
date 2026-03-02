@@ -108,11 +108,11 @@ function NeuralNetwork({ count = 300 }) {
 
 export function AnimatedBackground() {
     return (
-        <div className="fixed inset-0 z-[-1] bg-black pointer-events-none">
+        <div className="fixed inset-0 z-[-1] bg-black pointer-events-none" suppressHydrationWarning>
             <Canvas camera={{ position: [0, 0, 10], fov: 60 }} dpr={[1, 2]}>
                 <NeuralNetwork count={250} />
             </Canvas>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,#030305_100%)]"></div>
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,#030305_100%)]" suppressHydrationWarning></div>
         </div>
     );
 }

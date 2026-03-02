@@ -12,7 +12,7 @@ const navLinks = [
     { name: "AI Capabilities", href: "/ai-capabilities" },
     { name: "Industries", href: "/industries" },
     { name: "Our Approach", href: "/approach" },
-    { name: "About Us", href: "/about" },
+    { name: "Contact", href: "/contact" },
 ];
 
 export function Header() {
@@ -32,9 +32,9 @@ export function Header() {
             className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${isScrolled ? "bg-black/60 backdrop-blur-xl border-b border-white/10" : "bg-transparent"
                 }`}
         >
-            <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between">
+            <div className="mx-auto max-w-7xl px-6 h-20 flex items-center justify-between" suppressHydrationWarning>
                 <Link href="/" className="flex items-center gap-3 group">
-                    <div className="relative w-8 h-10 flex items-center justify-center">
+                    <div className="relative w-8 h-10 flex items-center justify-center" suppressHydrationWarning>
                         <Image
                             src="/logo.png"
                             alt="Radlabs Logo"
@@ -60,14 +60,14 @@ export function Header() {
                             <span className="absolute bottom-0 left-1/2 w-0 h-[2px] bg-brand-red -translate-x-1/2 transition-all duration-300 group-hover:w-full rounded-full" />
                         </Link>
                     ))}
-                    <div className="relative group">
-                        <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-red to-brand-darkred rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500" />
+                    <Link href="/contact" className="relative group">
+                        <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-red to-brand-darkred rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500" suppressHydrationWarning />
                         <Button variant="primary" className="relative bg-white text-black hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 border-none shadow-lg">
                             <span className="relative z-10 flex items-center gap-2">
                                 Book AI Consultation
                             </span>
                         </Button>
-                    </div>
+                    </Link>
                 </nav>
 
                 {/* Mobile Nav Toggle */}
@@ -100,12 +100,12 @@ export function Header() {
                                 <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-brand-red transition-all duration-300 group-hover:w-full rounded-full" />
                             </Link>
                         ))}
-                        <div className="relative group w-full mt-4">
+                        <Link href="/contact" className="relative group w-full mt-4" onClick={() => setMobileMenuOpen(false)}>
                             <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-red to-brand-darkred rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500" />
                             <Button variant="primary" className="relative w-full bg-white text-black hover:bg-black hover:text-white hover:scale-[1.02] transition-all duration-300 border-none shadow-lg">
                                 <span className="relative z-10">Book AI Consultation</span>
                             </Button>
-                        </div>
+                        </Link>
                     </div>
                 </motion.div>
             )}

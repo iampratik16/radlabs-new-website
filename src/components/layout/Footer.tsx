@@ -4,13 +4,13 @@ import { Typography } from "@/components/ui/typography";
 export function Footer() {
     return (
         <footer className="bg-black border-t border-white/10 pt-24 pb-12 overflow-hidden relative">
-            <div className="absolute inset-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-brand-red to-transparent opacity-50"></div>
+            <div className="absolute inset-0 top-0 h-px w-full bg-gradient-to-r from-transparent via-brand-red to-transparent opacity-50" suppressHydrationWarning></div>
 
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-                    <div className="md:col-span-1">
+            <div className="max-w-7xl mx-auto px-6" suppressHydrationWarning>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16" suppressHydrationWarning>
+                    <div className="md:col-span-1" suppressHydrationWarning>
                         <Link href="/" className="flex items-center gap-2 mb-6">
-                            <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center">
+                            <div className="w-8 h-8 rounded-full bg-brand-red flex items-center justify-center" suppressHydrationWarning>
                                 <span className="text-white font-display font-bold text-sm">RL</span>
                             </div>
                             <span className="text-xl font-display font-bold text-white tracking-wide">
@@ -59,8 +59,8 @@ export function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-                    <p className="text-neutral-500 text-sm">© {new Date().getFullYear()} Radlabs Technologies. All rights reserved.</p>
-                    <div className="flex gap-6">
+                    <p className="text-neutral-500 text-sm" suppressHydrationWarning>© {new Date().getFullYear()} Radlabs Technologies. All rights reserved.</p>
+                    <div className="flex gap-6" suppressHydrationWarning>
                         <Link href="/privacy" className="text-neutral-500 hover:text-white text-sm transition-colors">Privacy Policy</Link>
                         <Link href="/terms" className="text-neutral-500 hover:text-white text-sm transition-colors">Terms of Service</Link>
                     </div>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
     return (
@@ -56,7 +57,7 @@ export function Hero() {
                     transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
                     className="mt-12 flex flex-col sm:flex-row items-center gap-4"
                 >
-                    <div className="relative group w-full sm:w-auto">
+                    <Link href="/contact" className="relative group w-full sm:w-auto">
                         <div className="absolute -inset-0.5 bg-gradient-to-r from-brand-red via-brand-darkred to-brand-red rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500 bg-[length:200%_auto] hover:animate-gradient-x" />
                         <Button variant="primary" size="lg" className="relative w-full sm:w-auto bg-white text-black font-semibold hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 border-none shadow-xl">
                             <span className="relative z-10 flex items-center">
@@ -64,13 +65,13 @@ export function Hero() {
                                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </span>
                         </Button>
-                    </div>
-                    <div className="relative group w-full sm:w-auto">
+                    </Link>
+                    <Link href="/ai-capabilities" className="relative group w-full sm:w-auto">
                         <div className="absolute -inset-0.5 bg-white/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500" />
                         <Button variant="outline" size="lg" className="relative w-full sm:w-auto text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 backdrop-blur-md">
                             Explore Capabilities
                         </Button>
-                    </div>
+                    </Link>
                 </motion.div>
             </div>
         </section>

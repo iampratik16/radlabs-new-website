@@ -40,13 +40,17 @@ export function CTASection() {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4"
                 >
-                    <Button variant="primary" size="lg" className="bg-white text-black hover:bg-neutral-200 group w-full sm:w-auto">
-                        Schedule Architecture Review
-                        <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                    <Button variant="outline" size="lg" className="text-white w-full sm:w-auto">
-                        View Technical Documentation
-                    </Button>
+                    <a href="/contact" className="w-full sm:w-auto">
+                        <Button variant="primary" size="lg" className="w-full sm:w-auto bg-white text-black hover:bg-neutral-200 group">
+                            Schedule Architecture Review
+                            <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                    </a>
+                    <a href="/ai-capabilities" className="w-full sm:w-auto">
+                        <Button variant="outline" size="lg" className="text-white w-full sm:w-auto">
+                            View Technical Documentation
+                        </Button>
+                    </a>
                 </motion.div>
             </div>
         </section>
