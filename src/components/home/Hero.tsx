@@ -15,17 +15,7 @@ export function Hero() {
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 flex flex-col items-center text-center">
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-red/30 bg-brand-red/10 backdrop-blur-sm mb-8"
-                >
-                    <span className="w-2 h-2 rounded-full bg-brand-red animate-pulse" />
-                    <span className="text-sm font-medium text-brand-red font-sans tracking-wide uppercase">
-                        Enterprise AI Engineering
-                    </span>
-                </motion.div>
+
 
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
