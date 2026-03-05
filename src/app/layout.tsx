@@ -9,6 +9,7 @@ import { GridLines } from "@/components/effects/GridLines";
 import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
 import { Cursor } from "@/components/ui/Cursor";
 import { ChatBot } from "@/components/ui/ChatBot";
+import { Preloader } from "@/components/sections/Preloader";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 
@@ -34,6 +35,7 @@ export default function RootLayout({
         )}
       >
         <SmoothScrollProvider>
+          <Preloader />
           <NavigationTransitions />
           <GridLines />
           <AnimatedBackground />

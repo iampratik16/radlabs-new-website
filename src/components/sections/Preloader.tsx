@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
-import { FlameLogo } from '@/components/ui/FlameLogo';
+import Image from 'next/image';
 import { gsap } from 'gsap';
 
 export function Preloader() {
@@ -83,10 +83,16 @@ export function Preloader() {
             <div className="flex flex-col items-center gap-8">
                 <div
                     ref={logoRef}
-                    className="w-24 h-24 text-[var(--color-fire-neon)] opacity-0 scale-90"
+                    className="relative w-32 h-32 opacity-0 scale-90"
                     style={{ filter: 'drop-shadow(0 0 30px rgba(255,51,51,0.5))' }}
                 >
-                    <FlameLogo />
+                    <Image
+                        src="/logo.png"
+                        alt="RADLABS Logo"
+                        fill
+                        className="object-contain"
+                        priority
+                    />
                 </div>
 
                 <div ref={textRef} className="font-mono text-2xl tracking-[0.3em] text-white flex overflow-hidden">
