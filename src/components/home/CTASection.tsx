@@ -2,8 +2,10 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
+import { PremiumButton } from "@/components/ui/PremiumButton";
 import { FileDown, X, Send, ArrowRight } from "lucide-react";
 
 // ── Gated Download Modal ─────────────────────────────────────────────────────
@@ -250,14 +252,11 @@ export function CTASection() {
                         transition={{ duration: 0.5, delay: 0.4 }}
                         className="pt-6 flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
-                        <a href="/contact" className="w-full sm:w-auto">
-                            <Button variant="primary" size="lg" className="w-full sm:w-auto bg-white text-black group shadow-lg rounded-full font-semibold border border-transparent hover:text-brand-red hover:border-brand-red transition-all duration-300">
-                                <span className="flex items-center gap-2">
-                                    Book a Consultation
-                                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </span>
-                            </Button>
-                        </a>
+                        <Link href="/contact" className="w-full sm:w-auto">
+                            <PremiumButton showArrow>
+                                Book a Consultation
+                            </PremiumButton>
+                        </Link>
 
                         <Button
                             variant="outline"

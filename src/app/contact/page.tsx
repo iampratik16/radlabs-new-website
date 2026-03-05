@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { PageHeader } from "@/components/ui/PageHeader";
 import { Typography } from "@/components/ui/typography";
 import { Button } from "@/components/ui/button";
+import { PremiumButton } from "@/components/ui/PremiumButton";
 import { Send, Mail, MapPin } from "lucide-react";
 import React, { useState } from "react";
 
@@ -204,21 +205,13 @@ export default function ContactPage() {
                                 </div>
                             )}
 
-                            <Button
+                            <PremiumButton
                                 type="submit"
-                                variant="primary"
-                                disabled={status === "submitting"}
-                                className="w-full bg-brand-red hover:bg-brand-darkred text-white py-6 relative overflow-hidden group"
+                                className="w-full"
+                                icon={<Send size={18} />}
                             >
-                                <span className={`flex items-center justify-center gap-2 text-lg transition-transform duration-300 ${status === "submitting" ? 'translate-y-[-150%]' : 'translate-y-0'}`}>
-                                    Send Message <Send size={18} className="group-hover:translate-x-1 transition-transform" />
-                                </span>
-                                {status === "submitting" && (
-                                    <span className="absolute inset-0 flex items-center justify-center">
-                                        <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                                    </span>
-                                )}
-                            </Button>
+                                {status === "submitting" ? "Sending..." : "Send Message"}
+                            </PremiumButton>
                         </form>
                     )}
                 </motion.div>

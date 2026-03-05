@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { MOCK_COMPANY_INFO } from '@/data/mock/company';
+import { PremiumButton } from '@/components/ui/PremiumButton';
 import { Linkedin, Twitter, Instagram } from 'lucide-react';
 
 export function Footer() {
@@ -81,9 +82,11 @@ export function Footer() {
                         </a>
                         <Link
                             href="/contact"
-                            className="inline-block border border-[var(--color-border-red)] text-white font-mono text-xs uppercase tracking-widest py-3 px-6 hover:bg-[var(--color-fire-core)] hover:border-[var(--color-fire-neon)] transition-all duration-300 w-full"
+                            className="w-full"
                         >
-                            Book Intro
+                            <PremiumButton className="w-full">
+                                Book Intro
+                            </PremiumButton>
                         </Link>
                     </div>
                 </div>

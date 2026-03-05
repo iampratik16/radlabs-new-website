@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { PremiumButton } from "@/components/ui/PremiumButton";
 
 const navLinks = [
     { name: "Services", href: "/services" },
@@ -81,18 +82,9 @@ export function Header() {
 
                     {/* CTA Button */}
                     <Link href="/contact" suppressHydrationWarning>
-                        <motion.div
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.97 }}
-                            transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                        >
-                            <Button
-                                variant="primary"
-                                className="bg-white text-black font-semibold rounded-full border border-transparent shadow-lg hover:text-brand-red hover:border-brand-red transition-all duration-300"
-                            >
-                                Book AI Consultation
-                            </Button>
-                        </motion.div>
+                        <PremiumButton>
+                            Book AI Consultation
+                        </PremiumButton>
                     </Link>
                 </nav>
 
@@ -136,20 +128,11 @@ export function Header() {
                             </Link>
                         </motion.div>
                     ))}
-                    <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={mobileMenuOpen ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-                        transition={{ delay: navLinks.length * 0.07, duration: 0.3 }}
-                        className="relative group w-full mt-4"
-                    >
-                        <Button
-                            variant="primary"
-                            className="w-full bg-white text-black font-semibold rounded-full border border-transparent shadow-lg hover:text-brand-red hover:border-brand-red transition-all duration-300"
-                            onClick={() => setMobileMenuOpen(false)}
-                        >
+                    <Link href="/contact" className="w-full" onClick={() => setMobileMenuOpen(false)}>
+                        <PremiumButton className="w-full">
                             Book AI Consultation
-                        </Button>
-                    </motion.div>
+                        </PremiumButton>
+                    </Link>
                 </div>
             </motion.div>
         </motion.header>
