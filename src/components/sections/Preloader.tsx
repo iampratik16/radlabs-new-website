@@ -91,6 +91,7 @@ export function Preloader() {
                         src="/logo.png"
                         alt="RADLABS Logo"
                         fill
+                        sizes="(max-width: 768px) 128px, 128px"
                         className="object-contain"
                         priority
                     />

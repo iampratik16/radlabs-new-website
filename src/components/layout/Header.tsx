@@ -51,6 +51,7 @@ export function Header() {
                             src="/logo.png"
                             alt="Radlabs Logo"
                             fill
+                            sizes="(max-width: 768px) 32px, 32px"
                             className="object-contain drop-shadow-[0_0_12px_rgba(255,51,51,0.7)] group-hover:drop-shadow-[0_0_20px_rgba(255,51,51,1)] transition-all duration-500"
                             priority
                         />
